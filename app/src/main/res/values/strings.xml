@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Lasertag Counter</string>
+    <string name="player_hit_text">Player Tagged</string>
+    <string name="power_up_text">Power Up</string>
+    <string name="enemy_base_hit_text">Base Tagged</string>
+    <string name="enemy_base_destroyed_text">Base Destroyed</string>
+    <string name="teamRed">Team Red</string>
+    <string name="counter_start">0</string>
+    <string name="teamGreen">Team Green</string>
+    <string name="reset_button">Reset</string>
+</resources>

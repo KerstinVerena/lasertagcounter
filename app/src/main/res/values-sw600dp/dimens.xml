@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standardMargin">16dp</dimen>
+    <dimen name="smallMargin">16dp</dimen>
+    <dimen name="wideMargin">24dp</dimen>
+    <dimen name="scoreTextSize">90sp</dimen>
+    <dimen name="teamNameTextSize">40sp</dimen>
+    <dimen name="resetBottomMargin">40dp</dimen>
+    <dimen name="buttonTextSize">24sp</dimen>
+    <dimen name="resetPaddingHor">40dp</dimen>
+    <dimen name="resetPaddingVert">24dp</dimen>
+</resources>

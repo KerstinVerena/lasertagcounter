@@ -1,0 +1,59 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Primary theme color of the app (sets background color of app bar) -->
+        <item name="colorPrimary">#000000</item>
+        <!-- Background color of buttons in the app -->
+        <item name="colorButtonNormal">#03A9F4</item>
+        <item name="android:textColorPrimary">@color/whiteText</item>
+    </style>
+
+    <style name="teamNameRed">
+        <item name="android:layout_marginTop">@dimen/standardMargin</item>
+        <item name="android:layout_marginBottom">@dimen/standardMargin</item>
+        <item name="android:textSize">@dimen/teamNameTextSize</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/colorTeamRed</item>
+        <item name="android:background">@color/blackBackground</item>
+        <item name="android:layout_marginLeft">@dimen/smallMargin</item>
+        <item name="android:layout_marginRight">@dimen/smallMargin</item>
+    </style>
+
+    <style name="teamNameGreen">
+        <item name="android:layout_marginTop">@dimen/standardMargin</item>
+        <item name="android:layout_marginBottom">@dimen/standardMargin</item>
+        <item name="android:textSize">@dimen/teamNameTextSize</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/colorTeamGreen</item>
+        <item name="android:background">@color/blackBackground</item>
+        <item name="android:layout_marginRight">@dimen/smallMargin</item>
+        <item name="android:layout_marginLeft">@dimen/smallMargin</item>
+    </style>
+
+    <style name="scoreText">
+        <item name="android:textColor">@color/whiteText</item>
+        <item name="android:layout_marginBottom">@dimen/wideMargin</item>
+        <item name="android:textSize">@dimen/scoreTextSize</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="buttonDesginRed">
+        <item name="android:layout_marginBottom">@dimen/smallMargin</item>
+        <item name="android:layout_marginLeft">@dimen/wideMargin</item>
+        <item name="android:layout_marginRight">@dimen/wideMargin</item>
+        <item name="android:background">@color/colorTeamRed</item>
+        <item name="android:textColor">@color/buttonTextColor</item>
+        <item name="android:textSize">@dimen/buttonTextSize</item>
+    </style>
+
+    <style name="buttonDesginGreen">
+        <item name="android:layout_marginBottom">@dimen/smallMargin</item>
+        <item name="android:layout_marginLeft">@dimen/wideMargin</item>
+        <item name="android:layout_marginRight">@dimen/wideMargin</item>
+        <item name="android:background">@color/colorTeamGreen</item>
+        <item name="android:textColor">@color/buttonTextColor</item>
+        <item name="android:textSize">@dimen/buttonTextSize</item>
+    </style>
+
+</resources>
