@@ -39,7 +39,7 @@
     </style>
 
     <style name="buttonDesginRed">
-        <item name="android:layout_marginBottom">@dimen/smallMargin</item>
+        <item name="android:layout_marginBottom">@dimen/button_vertical_margin</item>
         <item name="android:layout_marginLeft">@dimen/wideMargin</item>
         <item name="android:layout_marginRight">@dimen/wideMargin</item>
         <item name="android:background">@color/colorTeamRed</item>
@@ -48,7 +48,7 @@
     </style>
 
     <style name="buttonDesginGreen">
-        <item name="android:layout_marginBottom">@dimen/smallMargin</item>
+        <item name="android:layout_marginBottom">@dimen/button_vertical_margin</item>
         <item name="android:layout_marginLeft">@dimen/wideMargin</item>
         <item name="android:layout_marginRight">@dimen/wideMargin</item>
         <item name="android:background">@color/colorTeamGreen</item>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Lasertag Counter</string>
+    <string name="app_name">Laser Tag Counter</string>
     <string name="player_hit_text">Player Tagged</string>
     <string name="power_up_text">Power Up</string>
     <string name="enemy_base_hit_text">Base Tagged</string>

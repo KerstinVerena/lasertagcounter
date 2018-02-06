@@ -9,4 +9,5 @@
     <dimen name="resetBottomMargin">32dp</dimen>
     <dimen name="resetPaddingHor">40dp</dimen>
     <dimen name="resetPaddingVert">8dp</dimen>
+    <dimen name="button_vertical_margin">16dp</dimen>
 </resources>
