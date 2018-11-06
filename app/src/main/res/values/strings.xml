@@ -8,4 +8,7 @@
     <string name="counter_start">0</string>
     <string name="teamGreen">Team Green</string>
     <string name="reset_button">Reset</string>
+    <string name="base_recharging">Recharging:\n</string>
+    <string name="time_value"> Sec.</string>
+    <string name="base_is_recharging">This base is recharging and can\'t be attacked.</string>
 </resources>

@@ -9,4 +9,5 @@
     <color name="colorTeamGreen">#76FF03</color>
     <color name="blackBackground">#80000000</color>
     <color name="whiteText">#FFFFFF</color>
+    <color name="disabledButton">#616161</color>
 </resources>

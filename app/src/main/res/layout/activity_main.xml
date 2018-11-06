@@ -1,5 +1,4 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -7,8 +6,11 @@
         android:id="@+id/background_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:contentDescription="@null"
         android:scaleType="centerCrop"
         android:src="@drawable/lasertag" />
+    <!-- Adding a content description: https://stackoverflow.com/questions/8500544/android-lint-contentdescription-warning -->
+    <!-- Setting content description to @null for merely decorative pictures: https://stackoverflow.com/questions/10864879/what-should-i-put-in-contentdescription-attribute-for-decorative-images-such-as -->
 
     <ScrollView
         android:layout_width="wrap_content"
@@ -18,148 +20,152 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:id="@+id/buttonLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
             <LinearLayout
-                android:layout_width="0dp"
+                android:id="@+id/buttonLayout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/team_red_name"
-                    style="@style/teamNameRed"
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/teamRed" />
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/team_red_score"
-                    style="@style/scoreText"
-                    android:layout_width="match_parent"
+                    <TextView
+                        android:id="@+id/team_red_name"
+                        style="@style/teamNameRed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/teamRed" />
+
+                    <TextView
+                        android:id="@+id/team_red_score"
+                        style="@style/scoreText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/counter_start" />
+
+                    <Button
+                        style="@style/buttonDesignRed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:onClick="playerHitTeamRed"
+                        android:text="@string/player_hit_text" />
+
+                    <Button
+                        style="@style/buttonDesignRed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:onClick="powerUpCollectedTeamRed"
+                        android:text="@string/power_up_text" />
+
+                    <Button
+                        android:id="@+id/base_hit_red"
+                        style="@style/buttonDesignRed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:onClick="baseHitTeamRed"
+                        android:text="@string/enemy_base_hit_text" />
+
+                    <Button
+                        android:id="@+id/base_destroyed_red_button"
+                        style="@style/buttonDesignRed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:onClick="baseDestroyedTeamRed"
+                        android:text="@string/enemy_base_destroyed_text" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/standardMargin"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/counter_start" />
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                <Button
-                    style="@style/buttonDesginRed"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:onClick="playerHitTeamRed"
-                    android:text="@string/player_hit_text" />
+                    <TextView
+                        android:id="@+id/team_green_name"
+                        style="@style/teamNameGreen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/teamGreen" />
 
-                <Button
-                    style="@style/buttonDesginRed"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:onClick="powerUpCollectedTeamRed"
-                    android:text="@string/power_up_text" />
+                    <TextView
+                        android:id="@+id/team_green_score"
+                        style="@style/scoreText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/counter_start" />
 
-                <Button
-                    style="@style/buttonDesginRed"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:onClick="baseHitTeamRed"
-                    android:text="@string/enemy_base_hit_text" />
+                    <Button
+                        style="@style/buttonDesignGreen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:onClick="playerHitTeamGreen"
+                        android:text="@string/player_hit_text" />
 
-                <Button
-                    style="@style/buttonDesginRed"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:onClick="baseDestroyedTeamRed"
-                    android:text="@string/enemy_base_destroyed_text" />
+                    <Button
+                        style="@style/buttonDesignGreen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:onClick="powerUpCollectedTeamGreen"
+                        android:text="@string/power_up_text" />
 
+                    <Button
+                        android:id="@+id/base_hit_green"
+                        style="@style/buttonDesignGreen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:onClick="baseHitTeamGreen"
+                        android:text="@string/enemy_base_hit_text" />
+
+                    <Button
+                        android:id="@+id/base_destroyed_green_button"
+                        style="@style/buttonDesignGreen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:onClick="baseDestroyedTeamGreen"
+                        android:text="@string/enemy_base_destroyed_text" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/standardMargin"
-                android:background="@android:color/darker_gray" />
-
-            <LinearLayout
-                android:layout_width="0dp"
+            <Button
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/team_green_name"
-                    style="@style/teamNameGreen"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/teamGreen" />
-
-                <TextView
-                    android:id="@+id/team_green_score"
-                    style="@style/scoreText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/counter_start" />
-
-                <Button
-                    style="@style/buttonDesginGreen"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:onClick="playerHitTeamGreen"
-                    android:text="@string/player_hit_text" />
-
-                <Button
-                    style="@style/buttonDesginGreen"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:onClick="powerUpCollectedTeamGreen"
-                    android:text="@string/power_up_text" />
-
-                <Button
-                    style="@style/buttonDesginGreen"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:onClick="baseHitTeamGreen"
-                    android:text="@string/enemy_base_hit_text" />
-
-                <Button
-                    style="@style/buttonDesginGreen"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:onClick="baseDestroyedTeamGreen"
-                    android:text="@string/enemy_base_destroyed_text" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="@dimen/resetBottomMargin"
-            android:onClick="resetAllScores"
-            android:paddingBottom="@dimen/resetPaddingVert"
-            android:paddingLeft="@dimen/resetPaddingHor"
-            android:paddingRight="@dimen/resetPaddingHor"
-            android:paddingTop="@dimen/resetPaddingVert"
-            android:text="@string/reset_button"
-            android:textColor="@color/buttonTextColor"
-            android:textSize="@dimen/buttonTextSize"
-            android:layout_below="@id/buttonLayout"/>
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/buttonLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/resetBottomMargin"
+                android:onClick="resetAllScores"
+                android:paddingBottom="@dimen/resetPaddingVert"
+                android:paddingLeft="@dimen/resetPaddingHor"
+                android:paddingRight="@dimen/resetPaddingHor"
+                android:paddingTop="@dimen/resetPaddingVert"
+                android:text="@string/reset_button"
+                android:textColor="@color/buttonTextColor"
+                android:textSize="@dimen/buttonTextSize" />
 
         </RelativeLayout>
 

@@ -32,7 +32,7 @@
         <item name="android:layout_marginLeft">@dimen/buttonSideMargin</item>
     </style>
 
-    <style name="buttonDesginRed">
+    <style name="buttonDesignRed">
         <item name="android:layout_marginBottom">@dimen/button_vertical_margin</item>
         <item name="android:layout_marginLeft">@dimen/buttonSideMargin</item>
         <item name="android:layout_marginRight">@dimen/buttonSideMargin</item>
@@ -42,7 +42,7 @@
         <item name="android:minHeight">@dimen/zeroDP</item>
     </style>
 
-    <style name="buttonDesginGreen">
+    <style name="buttonDesignGreen">
         <item name="android:layout_marginBottom">@dimen/button_vertical_margin</item>
         <item name="android:layout_marginLeft">@dimen/buttonSideMargin</item>
         <item name="android:layout_marginRight">@dimen/buttonSideMargin</item>
